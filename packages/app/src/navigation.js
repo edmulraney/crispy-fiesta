@@ -4,24 +4,22 @@ const url = '//localhost:8081/dist/main.js'
 // const Navigation = props => <div>hi</div>
 
 const Navigation = props => {
-  const [plugins, setPlugins] = useState(new Map())
+  const [plugins, setPlugins] = useState({})
 
   useEffect(() => {
     ;(async () => {
-      const dashboard = await require.resolveWeak(
-        /*
-        webpackIgnore: true,
-      */ url
+      const plugin = await import(/* webpackIgnore: true */ url).then(
+        () => window[url]
       )
-      console.log('got plugin', dashboard)
-      setPlugins(plugins.set(dashboard.id, dashboard))
+      console.log('got plugin', plugin)
+      setPlugins({ ...plugins, [plugin.id]: plugin })
     })()
   }, [])
-  console.log(plugins)
+  console.log('redner', plugins)
   return (
     <ul>
-      {Array.from(plugins).map(plugin => (
-        <li>{plugin.metadata.name}</li>
+      {Object.values(plugins).map(plugin => (
+        <li key={plugin.id}>{plugin.metadata.name}</li>
       ))}
     </ul>
   )

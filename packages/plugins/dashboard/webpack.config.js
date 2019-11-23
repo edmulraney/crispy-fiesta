@@ -1,7 +1,7 @@
 module.exports = {
   output: {
-    // library: 'dashboard',
-    // libraryTarget: 'umd',
+    library: '//localhost:8081/dist/main.js',
+    libraryTarget: 'window',
     // jsonpScriptType: 'module',
     publicPath: '//localhost:8081/',
   },
