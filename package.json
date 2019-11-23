@@ -1,0 +1,25 @@
+{
+  "name": "crispy-fiesta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "1.19.1",
+    "prop-types": "^15.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edmulraney/crispy-fiesta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edmulraney/crispy-fiesta/issues"
+  },
+  "homepage": "https://github.com/edmulraney/crispy-fiesta#readme"
+}

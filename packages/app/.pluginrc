@@ -1,0 +1,5 @@
+{
+  plugins: [
+    "//localhost:8081/dist/main.js",
+  ]
+}
