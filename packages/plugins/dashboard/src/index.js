@@ -1,16 +1,9 @@
-import { App } from './app.js'
+import { plugin } from './plugin.js'
 
-const id = 'dashboard'
+export { plugin }
 
-const metadata = {
-  name: 'Dashboard',
-}
-
-// export default { id, App, metadata }
-export { id, App, metadata }
-
-if (process.env.NODE_ENV !== 'production') {
-  if (module.hot) {
-    module.hot.accept('./app.js')
-  }
-}
+module.hot.accept('./plugin.js', () => {
+  const event = new CustomEvent('hmr', { detail: { plugin } })
+  document.body.dispatchEvent(event)
+  console.log('updated plugin')
+})
