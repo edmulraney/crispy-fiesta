@@ -64,7 +64,7 @@ window["//localhost:8081/dist/main.js"] =
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "3f8534458bdc15a61eab";
+/******/ 	var hotCurrentHash = "3aa9e9a0e3b6a4e7f97d";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1187,7 +1187,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"App\", function() { return App; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log('dashboard');\n\nvar App = function App(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h1\", null, \"Dashboard\");\n};\n\n\n\n//# sourceURL=webpack:////localhost:8081/dist/main.js/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"App\", function() { return App; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar App = function App(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h1\", null, \"Dashboard\");\n};\n\n\n\n//# sourceURL=webpack:////localhost:8081/dist/main.js/./src/app.js?");
 
 /***/ }),
 
@@ -1199,7 +1199,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _plugin_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plugin.js */ \"./src/plugin.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"plugin\", function() { return _plugin_js__WEBPACK_IMPORTED_MODULE_0__[\"plugin\"]; });\n\n\n\n\nif (true) {\n  module.hot.accept(/*! ./plugin.js */ \"./src/plugin.js\", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _plugin_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plugin.js */ \"./src/plugin.js\");\n(function () {\n    var event = new CustomEvent('hmr', {\n      detail: {\n        plugin: _plugin_js__WEBPACK_IMPORTED_MODULE_0__[\"plugin\"]\n      }\n    });\n    document.body.dispatchEvent(event);\n    console.log('updated plugin');\n  })(__WEBPACK_OUTDATED_DEPENDENCIES__); }.bind(this));\n}\n\n//# sourceURL=webpack:////localhost:8081/dist/main.js/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _plugin_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plugin.js */ \"./src/plugin.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"plugin\", function() { return _plugin_js__WEBPACK_IMPORTED_MODULE_0__[\"plugin\"]; });\n\n\n\n\nif (true) {\n  module.hot.accept(/*! ./plugin.js */ \"./src/plugin.js\", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _plugin_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plugin.js */ \"./src/plugin.js\");\n(function () {\n    var event = new CustomEvent('hmr', {\n      detail: {\n        plugin: _plugin_js__WEBPACK_IMPORTED_MODULE_0__[\"plugin\"]\n      }\n    });\n    document.body.dispatchEvent(event);\n  })(__WEBPACK_OUTDATED_DEPENDENCIES__); }.bind(this));\n}\n\n//# sourceURL=webpack:////localhost:8081/dist/main.js/./src/index.js?");
 
 /***/ }),
 
