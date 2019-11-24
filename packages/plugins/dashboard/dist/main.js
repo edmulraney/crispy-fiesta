@@ -64,7 +64,7 @@ window["//localhost:8081/dist/main.js"] =
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "31141ab2f42358371b15";
+/******/ 	var hotCurrentHash = "3f8534458bdc15a61eab";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1199,7 +1199,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _plugin_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plugin.js */ \"./src/plugin.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"plugin\", function() { return _plugin_js__WEBPACK_IMPORTED_MODULE_0__[\"plugin\"]; });\n\n\n\nmodule.hot.accept(/*! ./plugin.js */ \"./src/plugin.js\", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _plugin_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plugin.js */ \"./src/plugin.js\");\n(function () {\n  var event = new CustomEvent('hmr', {\n    detail: {\n      plugin: _plugin_js__WEBPACK_IMPORTED_MODULE_0__[\"plugin\"]\n    }\n  });\n  document.body.dispatchEvent(event);\n  console.log('updated plugin');\n})(__WEBPACK_OUTDATED_DEPENDENCIES__); }.bind(this));\n\n//# sourceURL=webpack:////localhost:8081/dist/main.js/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _plugin_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plugin.js */ \"./src/plugin.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"plugin\", function() { return _plugin_js__WEBPACK_IMPORTED_MODULE_0__[\"plugin\"]; });\n\n\n\n\nif (true) {\n  module.hot.accept(/*! ./plugin.js */ \"./src/plugin.js\", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _plugin_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plugin.js */ \"./src/plugin.js\");\n(function () {\n    var event = new CustomEvent('hmr', {\n      detail: {\n        plugin: _plugin_js__WEBPACK_IMPORTED_MODULE_0__[\"plugin\"]\n      }\n    });\n    document.body.dispatchEvent(event);\n    console.log('updated plugin');\n  })(__WEBPACK_OUTDATED_DEPENDENCIES__); }.bind(this));\n}\n\n//# sourceURL=webpack:////localhost:8081/dist/main.js/./src/index.js?");
 
 /***/ }),
 

@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import { PluginContext } from './context'
 
-let handleHmr
-
 const PluginProvider = props => {
   const [plugins, setPlugins] = useState([])
   const register = useCallback(plugin => setPlugins([...plugins, plugin]), [])
@@ -12,13 +10,18 @@ const PluginProvider = props => {
       console.log('received hmr event', { evt })
       const plugin = event.detail.plugin
       const index = plugins.findIndex(p => p.id === plugin.id)
+      console.log('asas', index, plugins)
+      const oldPlugin = plugins[index]
       const replacementPlugin = await import(
-        /* webpackIgnore: true */ '//localhost:8081/dist/main.js'
-      ).then(() => window['//localhost:8081/dist/main.js'].plugin)
+        /* webpackIgnore: true */ oldPlugin.url
+      ).then(() => {
+        window[oldPlugin.url].plugin.url = oldPlugin.url
+        return window[oldPlugin.url].plugin
+      })
       const nextPlugins = [
         ...plugins.slice(0, index),
         replacementPlugin,
-        ...plugins.slice(index),
+        ...plugins.slice(index + 1),
       ]
       setPlugins(nextPlugins)
     }
@@ -27,14 +30,14 @@ const PluginProvider = props => {
       console.log('cleaning up', handleHmr)
       document.body.removeEventListener('hmr', handleHmr)
     }
-  }, [])
+  }, [plugins])
 
   useEffect(() => {
     ;(async () => {
       const nextPlugins = await Promise.all(
         props.urls.map(url =>
-          import(/* webpackIgnore: true */ url).then(test1 => {
-            console.log({ test1 }, window[url])
+          import(/* webpackIgnore: true */ url).then(() => {
+            window[url].plugin.url = url
             return window[url].plugin
           })
         )

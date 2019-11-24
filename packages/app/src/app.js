@@ -10,7 +10,7 @@ const urls = ['//localhost:8081/dist/main.js']
 const App = props => {
   return (
     <PluginProvider urls={urls}>
-      <h1>Appx</h1>
+      <h1>App</h1>
       <Navigation />
     </PluginProvider>
   )
