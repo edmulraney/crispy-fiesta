@@ -1,26 +1,32 @@
-import React, { useEffect, useState } from 'react'
-
-const url = '//localhost:8081/dist/main.js'
-// const Navigation = props => <div>hi</div>
+import React, { useEffect, useState, useRef } from 'react'
+import { render } from 'react-dom'
+import { usePlugins } from '../lib/use-plugins'
 
 const Navigation = props => {
-  const [plugins, setPlugins] = useState({})
-
+  const ref = useRef(null)
+  const plugins = usePlugins()
   useEffect(() => {
-    ;(async () => {
-      const plugin = await import(/* webpackIgnore: true */ url).then(
-        () => window[url]
-      )
-      console.log('got plugin', plugin)
-      setPlugins({ ...plugins, [plugin.id]: plugin })
-    })()
-  }, [])
-  console.log('redner', plugins)
+    if (ref !== null && plugins.length) {
+      console.log({ plugins })
+      const Plugin = plugins[0].App
+      render(<Plugin />, ref.current)
+      document.body.addEventListener('hmr', evt => {
+        console.log('received hmr event', ref.current, { evt })
+        render(<evt.detail.plugin.App />, ref.current)
+      })
+    }
+  }, [plugins, ref])
+
   return (
     <ul>
-      {Object.values(plugins).map(plugin => (
-        <li key={plugin.id}>{plugin.metadata.name}</li>
-      ))}
+      {plugins.map(plugin => {
+        return (
+          <React.Fragment key={plugin.id}>
+            <li>{plugin.metadata.name}</li>
+            <div ref={ref}></div>
+          </React.Fragment>
+        )
+      })}
     </ul>
   )
 }

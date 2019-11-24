@@ -1,17 +1,19 @@
 import React from 'react'
-import { render } from 'react-dom'
 import './globals'
 import { Navigation } from './navigation.js'
+import { PluginProvider } from '../lib/provider'
 
 console.log('hihi')
 
+const urls = ['//localhost:8081/dist/main.js']
+
 const App = props => {
   return (
-    <>
-      <h1>App</h1>
+    <PluginProvider urls={urls}>
+      <h1>App1</h1>
       <Navigation />
-    </>
+    </PluginProvider>
   )
 }
 
-render(<App />, document.getElementById('app'))
+export { App }
